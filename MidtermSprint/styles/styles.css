@@ -83,7 +83,7 @@ footer {
   justify-content: end;
 }
 
-.socials > img {
+.socials > a > img {
   width: 2rem;
   height: 2rem;
 }
