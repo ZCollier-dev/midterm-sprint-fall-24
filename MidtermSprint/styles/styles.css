@@ -63,12 +63,27 @@ nav a:hover {
 
 footer {
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 4fr 1fr;
   background-color: #331111;
 }
 
 .copyright {
   display: flex;
   align-items: center;
-  padding-left: 5%;
+  padding-left: 4%;
+}
+
+.socials {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  gap: 3rem;
+  padding-top: 0.3rem;
+  padding-bottom: 0.3rem;
+  padding-right: 4rem;
+  justify-content: end;
+}
+
+.socials > img {
+  width: 2rem;
+  height: 2rem;
 }
