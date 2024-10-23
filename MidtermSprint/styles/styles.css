@@ -7,7 +7,6 @@
 .bodybox {
   background-color: #2e0509;
   color: white;
-  padding-left: 30px;
 }
 
 header {
@@ -49,11 +48,11 @@ nav {
 }
 
 .navbox:hover {
-color: white;
+  color: white;
 }
 .navbox:visited {
-  color: orangered
-  }
+  color: orangered;
+}
 
 nav a:link {
   color: white;
@@ -96,26 +95,33 @@ footer {
   height: 2rem;
 }
 
+.about-heading {
+  display: flex;
+  justify-content: center;
+}
+
+.about-main > p {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
 
 .ownerbox {
-
   text-align: top;
-  background-color:#1a0809;
+  background-color: #1a0809;
   color: white;
   border: 30px white;
   height: 750px;
-  width:  1775px;
+  width: 1775px;
   margin: 30px;
   padding-left: 20px;
   padding-bottom: 20px;
   padding-top: 20px;
-  
-
 }
 
 .business {
   align-content: center;
-  background-color:#1a0809;
+  background-color: #1a0809;
   color: white;
   width: 230px;
   height: 300px;
@@ -123,27 +129,24 @@ footer {
   margin-bottom: 20px;
   text-align: center;
   border: 30px white;
-
 }
 
 .ownerimg {
   text-align: right;
-  
 }
 
 .ownerimg img {
   margin-right: 500px;
 }
 
-
 .reviews {
   align-content: right;
-  background-color:#1a0809;
+  background-color: #1a0809;
   color: white;
   width: 400px;
   height: 300px;
   text-align: center;
   padding-top: 25px;
   border: 30px white;
-  margin-bottom:20px;
+  margin-bottom: 20px;
 }
