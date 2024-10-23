@@ -107,16 +107,20 @@ footer {
 }
 
 .ownerbox {
-  text-align: top;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
   background-color: #1a0809;
   color: white;
-  border: 30px white;
-  height: 750px;
-  width: 1775px;
-  margin: 30px;
-  padding-left: 20px;
-  padding-bottom: 20px;
-  padding-top: 20px;
+  border: 3px solid white;
+  margin: 1em;
+  padding-left: 1em;
+  padding-bottom: 1em;
+  padding-top: 1em;
+}
+
+.ownerimg {
+  display: flex;
+  justify-content: center;
 }
 
 .business {
@@ -129,14 +133,6 @@ footer {
   margin-bottom: 20px;
   text-align: center;
   border: 30px white;
-}
-
-.ownerimg {
-  text-align: right;
-}
-
-.ownerimg img {
-  margin-right: 500px;
 }
 
 .reviews {
