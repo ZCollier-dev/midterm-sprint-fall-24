@@ -167,8 +167,8 @@ footer {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 20px;
-  padding: 20px;
+  gap: 1rem;
+  padding: 1rem;
 }
 
 .products-heading {
