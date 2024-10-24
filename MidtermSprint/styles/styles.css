@@ -137,6 +137,8 @@ footer {
   color: white;
   margin-left: 30%;
   margin-right: 30%;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
   text-align: center;
   border: 3px solid white;
 }
@@ -150,5 +152,7 @@ footer {
   text-align: center;
   margin-left: 20%;
   margin-right: 20%;
+  padding-left: 1rem;
+  padding-right: 1rem;
   border: 3px solid white;
 }
