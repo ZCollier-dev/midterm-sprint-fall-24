@@ -18,6 +18,10 @@ header {
   height: auto;
 }
 
+main {
+  padding-bottom: 3rem;
+}
+
 .companyheading {
   grid-column-start: 1;
   grid-column-end: -2;
@@ -48,10 +52,7 @@ nav {
 }
 
 .navbox:hover {
-  color: white;
-}
-.navbox:visited {
-  color: orangered;
+  background-color: orangered;
 }
 
 nav a:link {
@@ -60,18 +61,18 @@ nav a:link {
 }
 
 nav a:visited {
-  color: orangered;
+  color: white;
   text-decoration: none;
 }
 
 nav a:hover {
-  color: rgb(255, 255, 255);
+  color: white;
 }
 
 footer {
   display: grid;
   grid-template-columns: 4fr 1fr;
-  background-color: #331111;
+  background-color: #551111;
 }
 
 .copyright {
@@ -112,10 +113,10 @@ footer {
   background-color: #1a0809;
   color: white;
   border: 3px solid white;
-  margin: 1em;
-  padding-left: 1em;
-  padding-bottom: 1em;
-  padding-top: 1em;
+  margin: 2rem;
+  padding-left: 2rem;
+  padding-bottom: 2rem;
+  padding-top: 2rem;
 }
 
 .ownerimg {
@@ -123,26 +124,31 @@ footer {
   justify-content: center;
 }
 
+.business-and-reviews {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
 .business {
-  align-content: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: #1a0809;
   color: white;
-  width: 230px;
-  height: 300px;
-  margin-left: 50px;
-  margin-bottom: 20px;
+  margin-left: 30%;
+  margin-right: 30%;
   text-align: center;
-  border: 30px white;
+  border: 3px solid white;
 }
 
 .reviews {
-  align-content: right;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: #1a0809;
   color: white;
-  width: 400px;
-  height: 300px;
   text-align: center;
-  padding-top: 25px;
-  border: 30px white;
-  margin-bottom: 20px;
+  margin-left: 20%;
+  margin-right: 20%;
+  border: 3px solid white;
 }
