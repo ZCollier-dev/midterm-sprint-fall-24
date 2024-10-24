@@ -24,201 +24,215 @@
           >
         </nav>
       </header>
-      <div class="order-container">
-        <h2>Molten Metalworks Custom Order Form</h2>
-        <div id="error-message" class="error"></div>
-        <form id="orderForm">
-          <div class="form-section">
-            <h3>Custom Item Details</h3>
-            <br />
-            <div class="form-group">
-              <label for="orderNumber"
-                >Order Number<span class="required-star">*</span></label
-              >
-              <input type="text" id="orderNumber" name="orderNumber" readonly />
-            </div>
-            <br />
-            <div class="form-group">
-              <label for="customItem"
-                >Custom Item to be Made<span class="required-star"
-                  >*</span
-                ></label
-              >
-              <input
-                type="text"
-                id="customItem"
-                name="customItem"
-                placeholder="Enter custom item"
-                required
-              />
-            </div>
-            <br />
-            <div class="form-group">
-              <label for="materialChosen"
-                >Material Chosen<span class="required-star">*</span></label
-              >
-              <select id="materialChosen" name="materialChosen" required>
-                <option value="">-- Select Material --</option>
-                <option value="Iron">Iron</option>
-                <option value="Copper">Copper</option>
-                <option value="Titanium">Titanium</option>
-              </select>
-            </div>
-            <br />
-            <div class="form-group">
-              <label for="quantity"
-                >Quantity<span class="required-star">*</span></label
-              >
-              <input type="number" id="quantity" name="quantity" required />
-            </div>
-            <br />
-            <div class="form-group">
-              <label for="totalPrice">Total price:</label>
-              <span id="totalPrice">$0.00</span>
-            </div>
-            <br />
-          </div>
-
-          <div class="form-section">
-            <h3>Customer Information (required)</h3>
-            <br />
-            <div class="form-group">
-              <label for="firstName"
-                >First Name<span class="required-star">*</span></label
-              >
-              <input type="text" id="firstName" name="firstName" required />
-            </div>
-            <br />
-            <div class="form-group">
-              <label for="lastName"
-                >Last Name<span class="required-star">*</span></label
-              >
-              <input type="text" id="lastName" name="lastName" required />
-            </div>
-            <br />
-            <div class="form-group">
-              <label for="email"
-                >Email Address<span class="required-star">*</span></label
-              >
-              <input type="email" id="email" name="email" required />
-            </div>
-            <br />
-            <div class="form-group">
-              <label for="streetAddress"
-                >Street Address<span class="required-star">*</span></label
-              >
-              <input
-                type="text"
-                id="streetAddress"
-                name="streetAddress"
-                required
-              />
-            </div>
-            <br />
-            <div class="form-group">
-              <label for="apartment">Apartment, Suite, etc. (optional)</label>
-              <input type="text" id="apartment" name="apartment" />
-            </div>
-            <br />
-            <div class="form-group">
-              <label for="city">City<span class="required-star">*</span></label>
-              <input type="text" id="city" name="city" required />
-            </div>
-            <br />
-            <div class="form-group">
-              <label for="province"
-                >Province<span class="required-star">*</span></label
-              >
-              <input type="text" id="province" name="province" required />
-            </div>
-            <br />
-            <div class="form-group">
-              <label for="postalCode"
-                >Postal Code<span class="required-star">*</span></label
-              >
-              <input type="text" id="postalCode" name="postalCode" required />
-            </div>
-            <br />
-            <div class="form-group">
-              <label for="phoneNumber"
-                >Phone Number<span class="required-star">*</span></label
-              >
-              <input type="tel" id="phoneNumber" name="phoneNumber" required />
-            </div>
-            <br />
-          </div>
-
-          <div class="form-section">
-            <h3>Payment Information</h3>
-            <br />
-            <div class="form-group">
-              <label for="cardName"
-                >Name on card<span class="required-star">*</span></label
-              >
-              <input type="text" id="cardName" name="cardName" required />
-            </div>
-            <br />
-            <div class="form-group">
-              <label for="cardNumber"
-                >Card Number<span class="required-star">*</span></label
-              >
-              <input
-                type="text"
-                id="cardNumber"
-                name="cardNumber"
-                pattern="\d{16}"
-                maxlength="16"
-                required
-                title="Card number should be 16 digits"
-              />
-            </div>
-            <br />
-            <div class="form-group">
-              <label for="securityNumber"
-                >Security Code (CVV)<span class="required-star">*</span></label
-              >
-              <input
-                type="text"
-                id="securityNumber"
-                name="securityNumber"
-                pattern="\d{3}"
-                maxlength="3"
-                required
-                title="Security code should be 3 digits"
-              />
-            </div>
-            <br />
-            <div class="form-group">
-              <label for="expirationDate"
-                >Expiration date (MM/YY)<span class="required-star"
-                  >*</span
-                ></label
-              >
-              <input
-                type="text"
-                id="expirationDate"
-                name="expirationDate"
-                maxlength="5"
-                required
-                pattern="(0[1-9]|1[0-2])\/\d{2}"
-                title="Expiration date must be in MM/YY format"
-              />
-            </div>
-            <br />
-            <div class="form-group">
-              <label for="rememberMe">Remember Me</label>
-              <input type="checkbox" id="rememberMe" name="rememberMe" />
-            </div>
-            <br />
-          </div>
-
-          <div class="button-container">
-            <button type="submit">Order Now</button>
-          </div>
-        </form>
-      </div>
-
       <main>
+        <div class="order-container">
+          <h2>Molten Metalworks Custom Order Form</h2>
+          <div id="error-message" class="error"></div>
+          <form id="orderForm">
+            <div class="form-section">
+              <h3>Custom Item Details</h3>
+              <br />
+              <div class="form-group">
+                <label for="orderNumber"
+                  >Order Number<span class="required-star">*</span></label
+                >
+                <input
+                  type="text"
+                  id="orderNumber"
+                  name="orderNumber"
+                  readonly
+                />
+              </div>
+              <br />
+              <div class="form-group">
+                <label for="customItem"
+                  >Custom Item to be Made<span class="required-star"
+                    >*</span
+                  ></label
+                >
+                <input
+                  type="text"
+                  id="customItem"
+                  name="customItem"
+                  placeholder="Enter custom item"
+                  required
+                />
+              </div>
+              <br />
+              <div class="form-group">
+                <label for="materialChosen"
+                  >Material Chosen<span class="required-star">*</span></label
+                >
+                <select id="materialChosen" name="materialChosen" required>
+                  <option value="">-- Select Material --</option>
+                  <option value="Iron">Iron</option>
+                  <option value="Copper">Copper</option>
+                  <option value="Titanium">Titanium</option>
+                </select>
+              </div>
+              <br />
+              <div class="form-group">
+                <label for="quantity"
+                  >Quantity<span class="required-star">*</span></label
+                >
+                <input type="number" id="quantity" name="quantity" required />
+              </div>
+              <br />
+              <div class="form-group">
+                <label for="totalPrice">Total price:</label>
+                <span id="totalPrice">$0.00</span>
+              </div>
+              <br />
+            </div>
+
+            <div class="form-section">
+              <h3>Customer Information (required)</h3>
+              <br />
+              <div class="form-group">
+                <label for="firstName"
+                  >First Name<span class="required-star">*</span></label
+                >
+                <input type="text" id="firstName" name="firstName" required />
+              </div>
+              <br />
+              <div class="form-group">
+                <label for="lastName"
+                  >Last Name<span class="required-star">*</span></label
+                >
+                <input type="text" id="lastName" name="lastName" required />
+              </div>
+              <br />
+              <div class="form-group">
+                <label for="email"
+                  >Email Address<span class="required-star">*</span></label
+                >
+                <input type="email" id="email" name="email" required />
+              </div>
+              <br />
+              <div class="form-group">
+                <label for="streetAddress"
+                  >Street Address<span class="required-star">*</span></label
+                >
+                <input
+                  type="text"
+                  id="streetAddress"
+                  name="streetAddress"
+                  required
+                />
+              </div>
+              <br />
+              <div class="form-group">
+                <label for="apartment">Apartment, Suite, etc. (optional)</label>
+                <input type="text" id="apartment" name="apartment" />
+              </div>
+              <br />
+              <div class="form-group">
+                <label for="city"
+                  >City<span class="required-star">*</span></label
+                >
+                <input type="text" id="city" name="city" required />
+              </div>
+              <br />
+              <div class="form-group">
+                <label for="province"
+                  >Province<span class="required-star">*</span></label
+                >
+                <input type="text" id="province" name="province" required />
+              </div>
+              <br />
+              <div class="form-group">
+                <label for="postalCode"
+                  >Postal Code<span class="required-star">*</span></label
+                >
+                <input type="text" id="postalCode" name="postalCode" required />
+              </div>
+              <br />
+              <div class="form-group">
+                <label for="phoneNumber"
+                  >Phone Number<span class="required-star">*</span></label
+                >
+                <input
+                  type="tel"
+                  id="phoneNumber"
+                  name="phoneNumber"
+                  required
+                />
+              </div>
+              <br />
+            </div>
+
+            <div class="form-section">
+              <h3>Payment Information</h3>
+              <br />
+              <div class="form-group">
+                <label for="cardName"
+                  >Name on card<span class="required-star">*</span></label
+                >
+                <input type="text" id="cardName" name="cardName" required />
+              </div>
+              <br />
+              <div class="form-group">
+                <label for="cardNumber"
+                  >Card Number<span class="required-star">*</span></label
+                >
+                <input
+                  type="text"
+                  id="cardNumber"
+                  name="cardNumber"
+                  pattern="\d{16}"
+                  maxlength="16"
+                  required
+                  title="Card number should be 16 digits"
+                />
+              </div>
+              <br />
+              <div class="form-group">
+                <label for="securityNumber"
+                  >Security Code (CVV)<span class="required-star"
+                    >*</span
+                  ></label
+                >
+                <input
+                  type="text"
+                  id="securityNumber"
+                  name="securityNumber"
+                  pattern="\d{3}"
+                  maxlength="3"
+                  required
+                  title="Security code should be 3 digits"
+                />
+              </div>
+              <br />
+              <div class="form-group">
+                <label for="expirationDate"
+                  >Expiration date (MM/YY)<span class="required-star"
+                    >*</span
+                  ></label
+                >
+                <input
+                  type="text"
+                  id="expirationDate"
+                  name="expirationDate"
+                  maxlength="5"
+                  required
+                  pattern="(0[1-9]|1[0-2])\/\d{2}"
+                  title="Expiration date must be in MM/YY format"
+                />
+              </div>
+              <br />
+              <div class="form-group">
+                <label for="rememberMe">Remember Me</label>
+                <input type="checkbox" id="rememberMe" name="rememberMe" />
+              </div>
+              <br />
+            </div>
+
+            <div class="button-container">
+              <button type="submit">Order Now</button>
+            </div>
+          </form>
+        </div>
+
         <script src="scripts/script.js"></script>
       </main>
 
