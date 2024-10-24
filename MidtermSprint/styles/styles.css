@@ -163,36 +163,44 @@ footer {
 
 /* Product Page */
 
-main {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    padding: 20px;
-  }
+.product-box-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
 
-  .product-box {
-    display: flex;
-    float: left;
-    padding: 10px;
-    margin: 15px;
-    align-content: center;
-    text-align: center;
-  } 
+.products-heading {
+  text-align: center;
+  padding-top: 1rem;
+}
 
-  .img-box {
-    background-color: rgba(0, 0, 0, 0.4);
-    height: 400px;
-    width: 300px;
-    padding: 25px;
-  }
+.product-box {
+  display: flex;
+  float: left;
+  padding: 1rem;
+  margin: 1.5rem;
+  align-content: center;
+  text-align: center;
+}
 
-  .img-box > img, p, h4 {
-    opacity: 1;
-  }
+.img-box {
+  background-color: rgba(0, 0, 0, 0.4);
+  height: 400px;
+  width: 300px;
+  padding: 2rem;
+}
 
-  .img-box > p, h4 {
-    padding-top: 15px;
-  }
+.img-box > img,
+p,
+h4 {
+  opacity: 1;
+}
+
+.img-box > p,
+h4 {
+  padding-top: 15px;
+}
 
 /* Order Page */
