@@ -205,11 +205,10 @@ h4 {
 
 /* Order Page */
 /* Container for the form with padding and centered content */
-.container {
+.order-container {
   max-width: 900px;
   width: 100%;
   padding: 20px;
-  background-color: #4d0707;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   overflow: visible; /* Make sure content is not hidden */
@@ -231,7 +230,6 @@ h4 {
   justify-content: space-between;
   margin-bottom: 15px;
   visibility: visible; /* Ensure visibility */
-  position: relative; /* Ensure they stay in the correct place */
 }
 .form-group label {
   width: 30%;
