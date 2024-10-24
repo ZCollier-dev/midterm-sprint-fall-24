@@ -1,0 +1,107 @@
+ /* Make body take full height and use flexbox for centering */
+ body {
+    font-family: 'Arial', sans-serif;
+    background-color: #3b0200;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* Container for the form with padding and centered content */
+  .container {
+    max-width: 900px;
+    width: 100%;
+    padding: 20px;
+    background-color: #4d0707;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    overflow: visible; /* Make sure content is not hidden */
+  }
+  
+
+  /* Headings */
+  h2 {
+    text-align: center;
+    color: #fff;
+  }
+
+  .form-section {
+    margin-bottom: 30px;
+  }
+
+  .form-section h3 {
+    text-align: center;
+    color: #d7a97a;
+    margin-bottom: 20px;
+  }
+
+  /* Flexbox for form groups with label and input */
+  .form-group {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    visibility: visible; /* Ensure visibility */
+    position: relative; /* Ensure they stay in the correct place */
+  }
+  .form-group label {
+    width: 30%;
+    text-align: right;
+    padding-right: 10px;
+  }
+
+  .form-group input,
+  .form-group select {
+    width: 65%;
+    padding: 8px;
+    border-radius: 5px;
+    border: none;
+    background-color: #6b2a2a;
+    color: #fff;
+  }
+
+  .form-section input, .form-section select {
+    background-color: #6b2a2a;
+    color: #fff;
+  }
+
+  /* Red asterisk for required fields */
+  .required-star {
+    color: red;
+    margin-left: 5px;
+  }
+
+  /* Error message styling */
+  .error {
+    color: #ffcccc;
+    font-size: 0.9rem;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  /* Centering the submit button */
+  .button-container {
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  button {
+    background-color: #d7a97a;
+    color: #4d0707;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  #totalPrice {
+    width: 100px;
+    display: inline-block;
+    padding: 8px;
+    background-color: #6b2a2a;
+    color: #fff;
+    border-radius: 5px;
+  }
