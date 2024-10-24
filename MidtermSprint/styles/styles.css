@@ -96,6 +96,8 @@ footer {
   height: 2rem;
 }
 
+/* Index Page */
+
 .about-heading {
   display: flex;
   justify-content: center;
@@ -161,3 +163,7 @@ footer {
   padding-right: 1rem;
   border: 3px solid white;
 }
+
+/* Product Page */
+
+/* Order Page */
