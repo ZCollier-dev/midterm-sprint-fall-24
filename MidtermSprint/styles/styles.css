@@ -163,4 +163,36 @@ footer {
 
 /* Product Page */
 
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+  }
+
+  .product-box {
+    display: flex;
+    float: left;
+    padding: 10px;
+    margin: 15px;
+    align-content: center;
+    text-align: center;
+  } 
+
+  .img-box {
+    background-color: rgba(0, 0, 0, 0.4);
+    height: 400px;
+    width: 300px;
+    padding: 25px;
+  }
+
+  .img-box > img, p, h4 {
+    opacity: 1;
+  }
+
+  .img-box > p, h4 {
+    padding-top: 15px;
+  }
+
 /* Order Page */
