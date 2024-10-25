@@ -33,14 +33,33 @@
               <th>Item Material</th>
               <th>Item Price</th>
               <th>Item Quantity</th>
+              <th>Remove Item</th>
             </thead>
-            <tr id="example">
+            <tr>
+              <!-- Example for display purposes-->
               <td>Gold Bracelet</td>
               <td>Gold</td>
               <td>$400.00</td>
               <td>1</td>
+              <td class="remove-button">
+                <button type="submit">Remove</button>
+              </td>
+            </tr>
+            <tr>
+              <!-- Example for display purposes-->
+              <td>Gold Bracelet</td>
+              <td>Gold</td>
+              <td>$400.00</td>
+              <td>1</td>
+              <td>
+                <button type="submit" class="remove-button">Remove</button>
+              </td>
             </tr>
           </table>
+        </div>
+        <div class="order-total">
+          <label for="orderTotal">Order Total: </label
+          ><input type="text" id="orderTotal" name="orderTotal" readonly />
         </div>
       </main>
 

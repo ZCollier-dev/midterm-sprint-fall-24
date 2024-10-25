@@ -284,17 +284,35 @@ select {
 #orderList {
   border-collapse: collapse;
   width: 50%;
+  border: #fff solid 3px;
 }
 
 #orderList thead th {
   border: #fff solid 3px;
   padding: 0.5rem;
+  background-color: #4d0707;
 }
 
 #orderList tr td {
   border-left: #fff solid 3px;
-  border-right: #fff solid 3px;
-  border-top: #fff dotted 3px;
   border-bottom: #fff dotted 3px;
   padding: 0.25rem;
+  background-color: #6b2a2a;
+}
+
+.order-total {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  padding-right: 30%;
+}
+
+.order-total > input {
+  width: 10%;
+  padding: 0.5rem;
+  border-radius: 5px;
+  border: none;
+  background-color: #6b2a2a;
+  color: #fff;
+  margin-left: 1rem;
 }
