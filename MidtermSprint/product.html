@@ -176,6 +176,36 @@
           <div class="custom-order-heading">
             <h4>Place a Custom Order here for an item not shown.</h4>
           </div>
+          <form class="custom-order-form">
+            <label for="customOrderName"
+              >Item to Make<span class="required-star">*</span></label
+            >
+            <input
+              type="text"
+              id="customOrderName"
+              name="customOrderName"
+              required
+            />
+            <label for="customItemMaterial"
+              >Item Material<span class="required-star">*</span></label
+            ><select id="customItemMaterial" name="customItemMaterial" required>
+              <option value="">-- Select Material --</option>
+              <option value="Iron">Iron</option>
+              <option value="Copper">Copper</option>
+              <option value="Gold">Gold</option>
+            </select>
+            <label for="customItemQuantity"
+              >Item Quantity<span class="required-star">*</span></label
+            ><input
+              type="number"
+              id="customItemQuantity"
+              name="customItemQuantity"
+              required
+            />
+            <div class="custom-item-submit">
+              <button type="submit">Add to Order</button>
+            </div>
+          </form>
         </div>
       </main>
       <footer>

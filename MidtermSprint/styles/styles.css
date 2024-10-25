@@ -94,6 +94,21 @@ footer {
   height: 2rem;
 }
 
+/* Red asterisk for required fields */
+.required-star {
+  color: red;
+  margin-left: 5px;
+}
+
+button {
+  background-color: #d7a97a;
+  color: #4d0707;
+  padding: 0.5rem 2rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
 /* Index Page */
 
 .about-heading {
@@ -205,15 +220,41 @@ h4 {
 
 .custom-order-box {
   background-color: rgba(0, 0, 0, 0.4);
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  margin: 1.5rem;
+  margin: 1.5rem 5%;
 }
 
 .custom-order-heading {
   text-align: center;
   grid-column-start: 1;
   grid-column-end: -1;
+}
+
+.custom-order-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 2rem;
+  gap: 1rem;
+}
+
+.custom-order-form > label {
+  text-align: right;
+}
+
+.custom-order-form > input,
+select {
+  width: 50%;
+  padding: 0.5rem;
+  border-radius: 5px;
+  border: none;
+  background-color: #6b2a2a;
+  color: #fff;
+}
+
+.custom-item-submit {
+  display: flex;
+  grid-column-start: 1;
+  grid-column-end: -1;
+  justify-content: center;
 }
 
 /* Order Page */
@@ -262,12 +303,6 @@ h4 {
   color: #fff;
 }
 
-/* Red asterisk for required fields */
-.required-star {
-  color: red;
-  margin-left: 5px;
-}
-
 /* Error message styling */
 .error {
   color: #ffcccc;
@@ -280,15 +315,6 @@ h4 {
 .button-container {
   text-align: center;
   margin-top: 20px;
-}
-
-button {
-  background-color: #d7a97a;
-  color: #4d0707;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
 }
 
 #totalPrice {
