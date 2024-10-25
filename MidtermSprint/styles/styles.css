@@ -203,6 +203,19 @@ h4 {
   padding-top: 15px;
 }
 
+.custom-order-box {
+  background-color: rgba(0, 0, 0, 0.4);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 1.5rem;
+}
+
+.custom-order-heading {
+  text-align: center;
+  grid-column-start: 1;
+  grid-column-end: -1;
+}
+
 /* Order Page */
 /* Container for the form with padding and centered content */
 .order-container {
