@@ -316,32 +316,3 @@ select {
   color: #fff;
   margin-left: 1rem;
 }
-
-.customer-info-box {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-}
-
-.customer-info {
-  display: grid;
-  grid-template-rows: repeat(10, 1fr);
-  gap: 1rem;
-}
-
-.customer-payment {
-  display: grid;
-  grid-template-rows: repeat(5, 1fr);
-  gap: 1rem;
-}
-
-.information-entry {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-}
-
-.order-button {
-  grid-column-start: 1;
-  grid-column-end: -1;
-  display: flex;
-  justify-content: center;
-}
