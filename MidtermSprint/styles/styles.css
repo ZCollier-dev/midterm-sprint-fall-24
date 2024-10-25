@@ -324,7 +324,7 @@ select {
 }
 
 .customer-info-box > table {
-  width: 25%;
+  width: 40%;
 }
 
 .customer-info-box table tr td {
@@ -339,6 +339,7 @@ select {
   background-color: #6b2a2a;
   color: #fff;
   margin-left: 1rem;
+  width: 100%;
 }
 
 .order-button {
