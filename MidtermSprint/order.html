@@ -61,171 +61,194 @@
           <label for="orderTotal">Order Total: </label
           ><input type="text" id="orderTotal" name="orderTotal" readonly />
         </div>
-        <form class="customer-info-box">
-          <table>
-            <thead>
-              <th colspan="2"><h3>Customer Information</h3></th>
-            </thead>
-            <tr>
-              <td>
-                <label for="firstName"
-                  >First Name<span class="required-star">*</span></label
-                >
-              </td>
-              <td>
-                <input type="text" id="firstName" name="firstName" required />
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <label for="lastName"
-                  >Last Name<span class="required-star">*</span></label
-                >
-              </td>
-              <td>
-                <input type="text" id="lastName" name="lastName" required />
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <label for="emailAddress"
-                  >Email Address<span class="required-star">*</span></label
-                >
-              </td>
-              <td>
-                <input
-                  type="text"
-                  id="emailAddress"
-                  name="emailAddress"
-                  required
-                />
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <label for="streetAddress"
-                  >Street Address<span class="required-star">*</span></label
-                >
-              </td>
-              <td>
-                <input
-                  type="text"
-                  id="streetAddress"
-                  name="streetAddress"
-                  required
-                />
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <label for="apartmentNumber"
-                  >Apartment, Suite, etc (optional)</label
-                >
-              </td>
-              <td>
-                <input
-                  type="text"
-                  id="apartmentNumber"
-                  name="apartmentNumber"
-                />
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <label for="city"
-                  >City<span class="required-star">*</span></label
-                >
-              </td>
-              <td>
-                <input type="text" id="city" name="city" required />
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <label for="province"
-                  >Province<span class="required-star">*</span></label
-                >
-              </td>
-              <td>
-                <input type="text" id="province" name="province" required />
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <label for="postalCode"
-                  >Postal Code<span class="required-star">*</span></label
-                >
-              </td>
-              <td>
-                <input type="text" id="postalCode" name="postalCode" required />
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <label for="phoneNumber"
-                  >Phone Number<span class="required-star">*</span></label
-                >
-              </td>
-              <td>
-                <input
-                  type="text"
-                  id="phoneNumber"
-                  name="phoneNumber"
-                  required
-                />
-              </td>
-            </tr>
-            <tr>
-              <th colspan="2">Payment Information</th>
-            </tr>
-            <tr>
-              <td>
-                <label for="nameOnCard"
-                  >Name On Card<span class="required-star">*</span></label
-                >
-              </td>
-              <td>
-                <input type="text" id="nameOnCard" name="nameOnCard" required />
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <label for="cardNumber"
-                  >Card Number<span class="required-star">*</span></label
-                >
-              </td>
-              <td>
-                <input type="text" id="cardNumber" name="cardNumber" required />
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <label for="cardExpiry"
-                  >Expiry Date (MM/YY)<span class="required-star"
-                    >*</span
-                  ></label
-                >
-              </td>
-              <td>
-                <input type="text" id="cardExpiry" name="cardExpiry" required />
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <label for="securityNumber"
-                  >Security Number<span class="required-star">*</span></label
-                >
-              </td>
-              <td>
-                <input
-                  type="text"
-                  id="securityNumber"
-                  name="securityNumber"
-                  required
-                />
-              </td>
-            </tr>
-          </table>
+        <form>
+          <div class="customer-info-box">
+            <table>
+              <thead>
+                <th colspan="2"><h3>Customer Information</h3></th>
+              </thead>
+              <tr>
+                <td>
+                  <label for="firstName"
+                    >First Name<span class="required-star">*</span></label
+                  >
+                </td>
+                <td>
+                  <input type="text" id="firstName" name="firstName" required />
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label for="lastName"
+                    >Last Name<span class="required-star">*</span></label
+                  >
+                </td>
+                <td>
+                  <input type="text" id="lastName" name="lastName" required />
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label for="emailAddress"
+                    >Email Address<span class="required-star">*</span></label
+                  >
+                </td>
+                <td>
+                  <input
+                    type="text"
+                    id="emailAddress"
+                    name="emailAddress"
+                    required
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label for="streetAddress"
+                    >Street Address<span class="required-star">*</span></label
+                  >
+                </td>
+                <td>
+                  <input
+                    type="text"
+                    id="streetAddress"
+                    name="streetAddress"
+                    required
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label for="apartmentNumber">Apartment, Suite, etc</label>
+                </td>
+                <td>
+                  <input
+                    type="text"
+                    id="apartmentNumber"
+                    name="apartmentNumber"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label for="city"
+                    >City<span class="required-star">*</span></label
+                  >
+                </td>
+                <td>
+                  <input type="text" id="city" name="city" required />
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label for="province"
+                    >Province<span class="required-star">*</span></label
+                  >
+                </td>
+                <td>
+                  <input type="text" id="province" name="province" required />
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label for="postalCode"
+                    >Postal Code<span class="required-star">*</span></label
+                  >
+                </td>
+                <td>
+                  <input
+                    type="text"
+                    id="postalCode"
+                    name="postalCode"
+                    required
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label for="phoneNumber"
+                    >Phone Number<span class="required-star">*</span></label
+                  >
+                </td>
+                <td>
+                  <input
+                    type="text"
+                    id="phoneNumber"
+                    name="phoneNumber"
+                    required
+                  />
+                </td>
+              </tr>
+              <tr>
+                <th colspan="2">Payment Information</th>
+              </tr>
+              <tr>
+                <td>
+                  <label for="nameOnCard"
+                    >Name On Card<span class="required-star">*</span></label
+                  >
+                </td>
+                <td>
+                  <input
+                    type="text"
+                    id="nameOnCard"
+                    name="nameOnCard"
+                    required
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label for="cardNumber"
+                    >Card Number<span class="required-star">*</span></label
+                  >
+                </td>
+                <td>
+                  <input
+                    type="text"
+                    id="cardNumber"
+                    name="cardNumber"
+                    required
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label for="cardExpiry"
+                    >Expiry Date (MM/YY)<span class="required-star"
+                      >*</span
+                    ></label
+                  >
+                </td>
+                <td>
+                  <input
+                    type="text"
+                    id="cardExpiry"
+                    name="cardExpiry"
+                    required
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label for="securityNumber"
+                    >Security Number<span class="required-star">*</span></label
+                  >
+                </td>
+                <td>
+                  <input
+                    type="text"
+                    id="securityNumber"
+                    name="securityNumber"
+                    required
+                  />
+                </td>
+              </tr>
+            </table>
+          </div>
+          <div class="order-button">
+            <button type="submit">Submit Order</button>
+          </div>
         </form>
       </main>
 

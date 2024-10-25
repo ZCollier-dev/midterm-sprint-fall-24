@@ -320,4 +320,28 @@ select {
 .customer-info-box {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
+}
+
+.customer-info-box > table {
+  width: 25%;
+}
+
+.customer-info-box table tr td {
+  padding: 1rem;
+  text-align: right;
+}
+
+.customer-info-box table tr td input {
+  padding: 0.5rem;
+  border-radius: 5px;
+  border: none;
+  background-color: #6b2a2a;
+  color: #fff;
+  margin-left: 1rem;
+}
+
+.order-button {
+  display: flex;
+  justify-content: center;
 }
