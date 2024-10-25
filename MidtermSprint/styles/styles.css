@@ -316,3 +316,8 @@ select {
   color: #fff;
   margin-left: 1rem;
 }
+
+.customer-info-box {
+  display: flex;
+  justify-content: center;
+}
