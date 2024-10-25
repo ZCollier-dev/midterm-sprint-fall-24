@@ -61,6 +61,104 @@
           <label for="orderTotal">Order Total: </label
           ><input type="text" id="orderTotal" name="orderTotal" readonly />
         </div>
+        <div class="products-heading"><h2>Customer Information</h2></div>
+        <form class="customer-info-box">
+          <div class="customer-info">
+            <h3>Billing Information</h3>
+            <div class="information-entry">
+              <label for="firstName"
+                >First Name<span class="required-star">*</span>: </label
+              ><input type="text" id="firstName" name="firstName" required />
+            </div>
+            <div class="information-entry">
+              <label for="lastName"
+                >Last Name<span class="required-star">*</span>: </label
+              ><input type="text" id="lastName" name="lastName" required />
+            </div>
+            <div class="information-entry">
+              <label for="emailAddress"
+                >Email Address<span class="required-star">*</span>: </label
+              ><input
+                type="text"
+                id="emailAddress"
+                name="emailAddress"
+                required
+              />
+            </div>
+            <div class="information-entry">
+              <label for="streetAddress"
+                >Street Address<span class="required-star">*</span>: </label
+              ><input
+                type="text"
+                id="streetAddress"
+                name="streetAddress"
+                required
+              />
+            </div>
+            <div class="information-entry">
+              <label for="apartmentNumber"
+                >Apartment, Suite, etc (optional): </label
+              ><input type="text" id="apartmentNumber" name="apartmentNumber" />
+            </div>
+            <div class="information-entry">
+              <label for="cityName"
+                >City<span class="required-star">*</span>: </label
+              ><input type="text" id="cityName" name="cityName" required />
+            </div>
+            <div class="information-entry">
+              <label for="proivince"
+                >Province<span class="required-star">*</span>: </label
+              ><input type="text" id="province" name="province" required />
+            </div>
+            <div class="information-entry">
+              <label for="postalCode"
+                >Postal Code<span class="required-star">*</span>: </label
+              ><input type="text" id="postalCode" name="postalCode" required />
+            </div>
+            <div class="information-entry">
+              <label for="phoneNumber"
+                >Phone Number<span class="required-star">*</span>: </label
+              ><input
+                type="text"
+                id="phoneNumber"
+                name="phoneNumber"
+                required
+              />
+            </div>
+          </div>
+          <div class="customer-payment">
+            <h3>Payment Information</h3>
+            <div class="information-entry">
+              <label for="nameOnCard"
+                >Name on Card<span class="required-star">*</span>: </label
+              ><input type="text" id="nameOnCard" name="nameOnCard" required />
+            </div>
+            <div class="information-entry">
+              <label for="cardNumber"
+                >Card Number<span class="required-star">*</span>: </label
+              ><input type="text" id="cardNumber" name="cardNumber" required />
+            </div>
+            <div class="information-entry">
+              <label for="cardExpiry"
+                >Expiry Date (MM/YY)<span class="required-star">*</span
+                >: </label
+              ><input type="text" id="cardExpiry" name="cardExpiry" required />
+            </div>
+            <div class="information-entry">
+              <label for="securityNumber"
+                >Security Number<span class="required-star">*</span>: </label
+              ><input
+                type="text"
+                id="securityNumber"
+                name="securityNumber"
+                required
+              />
+            </div>
+          </div>
+          <div class="order-button">
+            <button type="submit">Place Order</button>
+          </div>
+        </form>
       </main>
 
       <footer>
