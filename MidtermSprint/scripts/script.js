@@ -1,4 +1,6 @@
-// Author: cybrrgrl / Scarlett, Zachary
+//AUTHORS: Zachary Collier, Sarah Elizabeth Murphy, Kyle/Scarlett Budgell
+//END DATE: October 26th 2024
+//DESCRIPTION: Script for the Ordering Page for Molten Metalworks.-->
 
 // Alert Handler
 
