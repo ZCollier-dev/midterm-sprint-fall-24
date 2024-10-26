@@ -223,6 +223,16 @@ h4 {
 
 /* Order Page */
 
+#alertBox {
+  display: flex;
+  position: sticky;
+  bottom: 0;
+  justify-content: center;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0);
+  padding: 1rem;
+}
+
 .custom-order-box {
   background-color: rgba(0, 0, 0, 0.4);
   margin: 1.5rem 5%;
