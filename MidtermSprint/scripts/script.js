@@ -13,25 +13,39 @@ const materialPrices = {
   Gold: 30
 };
 
-// Function to calculate and display the item price based on quantity and update the order total with tax
+// Function to calculate and display the item price based on quantity
 function updatePrices() {
   const materialChosen = document.getElementById('customItemMaterial').value;
   const quantityInput = document.getElementById('customItemQuantity').value;
   const itemPriceField = document.getElementById('customItemPrice');
-  const orderTotalField = document.getElementById('orderTotal');
   const quantity = parseInt(quantityInput) || 0;
 
   if (materialChosen in materialPrices && quantity > 0) {
     const pricePerUnit = materialPrices[materialChosen];
     const totalItemPrice = pricePerUnit * quantity;
-    const totalWithTax = totalItemPrice * 1.15;
-
     itemPriceField.value = `$${totalItemPrice.toFixed(2)}`;
-    orderTotalField.value = `$${totalWithTax.toFixed(2)}`;
   } else {
     itemPriceField.value = "$0.00";
-    orderTotalField.value = "$0.00";
   }
+}
+
+// Function to calculate and display the total of all items with tax
+function calculateOrderTotal() {
+  const orderListTable = document.getElementById('orderList').getElementsByTagName('tbody')[0];
+  let total = 0;
+
+  // Sum up each item's price in the table
+  for (let row of orderListTable.rows) {
+    const itemPriceText = row.cells[2].textContent.replace('$', ''); // Remove $ symbol
+    const itemPrice = parseFloat(itemPriceText);
+    if (!isNaN(itemPrice)) {
+      total += itemPrice;
+    }
+  }
+
+  // Apply 15% tax to the total
+  const totalWithTax = total * 1.15;
+  document.getElementById('orderTotal').value = `$${totalWithTax.toFixed(2)}`;
 }
 
 // Function to add item details to the order table
@@ -68,6 +82,7 @@ function addItemToTable(event) {
   removeButton.addEventListener('click', function() {
     newRow.remove();
     alert("Item has been removed from cart.");
+    calculateOrderTotal(); // Recalculate total after removing an item
   });
   removeCell.appendChild(removeButton);
 
@@ -75,7 +90,7 @@ function addItemToTable(event) {
 
   document.getElementById('orderForm').reset();
   displayOrderNumber();
-  document.getElementById('orderTotal').value = "$0.00";
+  calculateOrderTotal(); // Calculate total after adding an item
 }
 
 // Store customer and payment info in local storage if "Remember Me" is checked
