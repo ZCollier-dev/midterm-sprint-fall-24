@@ -114,17 +114,25 @@ button {
 .about-heading {
   display: flex;
   justify-content: center;
+  
+  
 }
 
 .about-main {
   padding-left: 5rem;
   padding-right: 5rem;
+  background-color:#1a0809;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+
 }
 
 .about-main > p {
   display: flex;
   justify-content: center;
   text-align: center;
+  
+  
 }
 
 .ownerbox {
@@ -138,6 +146,7 @@ button {
   padding-bottom: 2rem;
   padding-top: 2rem;
 }
+
 
 .ownerimg {
   display: flex;
@@ -198,6 +207,7 @@ button {
   margin: 1.5rem;
   align-content: center;
   text-align: center;
+  border: 3px solid white;
 }
 
 .img-box {
@@ -222,6 +232,7 @@ h4 {
 .custom-order-box {
   background-color: rgba(0, 0, 0, 0.4);
   margin: 1.5rem 5%;
+  border: 3px solid white;
 }
 
 .custom-order-heading {
@@ -288,6 +299,7 @@ select {
   justify-content: end;
   align-items: center;
   padding-right: 30%;
+  
 }
 
 .order-total > input {
@@ -304,6 +316,8 @@ select {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  
+  
 }
 
 .customer-info-box > table {
@@ -311,7 +325,7 @@ select {
 }
 
 .customer-info-box table tr td {
-  padding: 1rem;
+  padding: 1.5rem;
   text-align: right;
 }
 
@@ -328,4 +342,17 @@ select {
 .order-button {
   display: flex;
   justify-content: center;
+}
+
+.order-footer-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px; /* Space between the checkbox and button */
+  margin-top: 20px;
+}
+
+.order-footer-container label,
+.order-footer-container button {
+  cursor: pointer;
 }
