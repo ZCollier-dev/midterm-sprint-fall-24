@@ -127,7 +127,6 @@ function storeFormData() {
       lastName: document.getElementById("lastName").value,
       email: document.getElementById("emailAddress").value,
       streetAddress: document.getElementById("streetAddress").value,
-      apartment: document.getElementById("apartmentNumber").value,
       city: document.getElementById("city").value,
       province: document.getElementById("province").value,
       postalCode: document.getElementById("postalCode").value,
@@ -153,8 +152,6 @@ function loadStoredData() {
     document.getElementById("emailAddress").value = storedData.email || "";
     document.getElementById("streetAddress").value =
       storedData.streetAddress || "";
-    document.getElementById("apartmentNumber").value =
-      storedData.apartment || "";
     document.getElementById("city").value = storedData.city || "";
     document.getElementById("province").value = storedData.province || "";
     document.getElementById("postalCode").value = storedData.postalCode || "";
