@@ -140,6 +140,7 @@ function storeFormData() {
     localStorage.setItem("customerData", JSON.stringify(customerData));
   } else {
     localStorage.removeItem("customerData");
+    document.getElementById("customerInfoForm").reset();
   }
 }
 
