@@ -4,24 +4,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Order Now - Molten Metalworks</title>
-    <link rel="stylesheet" href="./styles/styles.css" />
+    <link rel="stylesheet" href="styles/styles.css" />
   </head>
   <body>
     <div class="bodybox">
       <header>
         <div class="companyheading"><h1>Molten Metalworks</h1></div>
         <nav>
-          <a href="./index.html"
-            ><div class="navbox" id="homenav"><p>Home</p></div></a
-          >
-          <a href="./product.html"
-            ><div class="navbox" id="poductsnav"><p>Products</p></div></a
-          >
-          <a href="./order.html"
-            ><div class="navbox" id="ordernav">
-              <p>Order Now!</p>
-            </div></a
-          >
+          <a href="./index.html"><div class="navbox" id="homenav"><p>Home</p></div></a>
+          <a href="./product.html"><div class="navbox" id="productsnav"><p>Products</p></div></a>
+          <a href="./order.html"><div class="navbox" id="ordernav"><p>Order Now!</p></div></a>
         </nav>
       </header>
       <main>
@@ -30,53 +22,40 @@
           <div class="custom-order-heading">
             <h4>Place a Custom Order here.</h4>
           </div>
-          <form class="custom-order-form">
-            <label for="customOrderNumber"
-              >Item Number<span class="required-star">*</span></label
-            ><input
-              type="text"
-              id="customOrderNumber"
-              name="customOrderNumber"
-              readonly
-            />
-            <label for="customOrderName"
-              >Item to Make<span class="required-star">*</span></label
-            >
-            <input
-              type="text"
-              id="customOrderName"
-              name="customOrderName"
-              required
-            />
-            <label for="customItemMaterial"
-              >Item Material<span class="required-star">*</span></label
-            ><select id="customItemMaterial" name="customItemMaterial" required>
+          <form class="custom-order-form" id="orderForm">
+            <!-- Random order number -->
+            <label for="customOrderNumber">Order Number<span class="required-star">*</span></label>
+            <input type="text" id="customOrderNumber" name="customOrderNumber" readonly />
+
+            <!-- Item Name/s -->
+            <label for="customOrderName">Item to Make<span class="required-star">*</span></label>
+            <input type="text" id="customOrderName" name="customOrderName" required />
+
+            <!-- Item Material with Price Calculations -->
+            <label for="customItemMaterial">Item Material<span class="required-star">*</span></label>
+            <select id="customItemMaterial" name="customItemMaterial" required>
               <option value="">-- Select Material --</option>
               <option value="Iron">Iron</option>
               <option value="Copper">Copper</option>
               <option value="Gold">Gold</option>
             </select>
-            <label for="customItemQuantity"
-              >Item Quantity<span class="required-star">*</span></label
-            ><input
-              type="number"
-              id="customItemQuantity"
-              name="customItemQuantity"
-              required
-            />
-            <label for="customItemPrice"
-              >Item Price<span class="required-star">*</span></label
-            ><input
-              type="text"
-              id="customItemPrice"
-              name="customItemPrice"
-              readonly
-            />
+
+            <!-- Item Quantities -->
+            <label for="customItemQuantity">Item Quantity<span class="required-star">*</span></label>
+            <input type="number" id="customItemQuantity" name="customItemQuantity" required />
+
+            <!-- Item Price Based on Material -->
+            <label for="customItemPrice">Item Price<span class="required-star">*</span></label>
+            <input type="text" id="customItemPrice" name="customItemPrice" readonly />
+
+            <!-- Submit  -->
             <div class="item-submit">
               <button type="submit">Add to Order</button>
             </div>
           </form>
         </div>
+
+        <!-- Order List Table -->
         <div class="products-heading"><h2>Items Ordered</h2></div>
         <div class="order-list-container">
           <table id="orderList">
@@ -88,217 +67,89 @@
               <th>Remove Item</th>
             </thead>
             <tr>
-              <!-- Example for display purposes-->
-              <td>Gold Bracelet</td>
+              <!-- Example Row -->
+              <td>Gold Bracelet (example, cannot be removed).</td>
               <td>Gold</td>
               <td>$400.00</td>
               <td>1</td>
-              <td class="remove-button">
-                <button type="submit">Remove</button>
-              </td>
-            </tr>
-            <tr>
-              <!-- Example for display purposes-->
-              <td>Gold Bracelet</td>
-              <td>Gold</td>
-              <td>$400.00</td>
-              <td>1</td>
-              <td>
-                <button type="submit" class="remove-button">Remove</button>
-              </td>
+              <td class="remove-button"><button type="submit">Remove</button></td>
             </tr>
           </table>
         </div>
+
+        <!-- Order Total with Tax Calculation -->
         <div class="order-total">
-          <label for="orderTotal">Order Total: </label
-          ><input type="text" id="orderTotal" name="orderTotal" readonly />
+          <label for="orderTotal">Order Total (with 15% tax): </label>
+          <input type="text" id="orderTotal" name="orderTotal" readonly />
         </div>
-        <form>
+
+        <!-- Customer Information Form -->
+        <form id="orderForm">
           <div class="customer-info-box">
             <table>
               <thead>
                 <th colspan="2"><h3>Customer Information</h3></th>
               </thead>
               <tr>
-                <td>
-                  <label for="firstName"
-                    >First Name<span class="required-star">*</span></label
-                  >
-                </td>
-                <td>
-                  <input type="text" id="firstName" name="firstName" required />
-                </td>
+                <td><label for="firstName">First Name<span class="required-star">*</span></label></td>
+                <td><input type="text" id="firstName" name="firstName" required /></td>
               </tr>
               <tr>
-                <td>
-                  <label for="lastName"
-                    >Last Name<span class="required-star">*</span></label
-                  >
-                </td>
-                <td>
-                  <input type="text" id="lastName" name="lastName" required />
-                </td>
+                <td><label for="lastName">Last Name<span class="required-star">*</span></label></td>
+                <td><input type="text" id="lastName" name="lastName" required /></td>
               </tr>
               <tr>
-                <td>
-                  <label for="emailAddress"
-                    >Email Address<span class="required-star">*</span></label
-                  >
-                </td>
-                <td>
-                  <input
-                    type="text"
-                    id="emailAddress"
-                    name="emailAddress"
-                    required
-                  />
-                </td>
+                <td><label for="emailAddress">Email Address<span class="required-star">*</span></label></td>
+                <td><input type="text" id="emailAddress" name="emailAddress" required /></td>
               </tr>
               <tr>
-                <td>
-                  <label for="streetAddress"
-                    >Street Address<span class="required-star">*</span></label
-                  >
-                </td>
-                <td>
-                  <input
-                    type="text"
-                    id="streetAddress"
-                    name="streetAddress"
-                    required
-                  />
-                </td>
+                <td><label for="streetAddress">Street Address<span class="required-star">*</span></label></td>
+                <td><input type="text" id="streetAddress" name="streetAddress" required /></td>
               </tr>
               <tr>
-                <td>
-                  <label for="apartmentNumber">Apartment, Suite, etc</label>
-                </td>
-                <td>
-                  <input
-                    type="text"
-                    id="apartmentNumber"
-                    name="apartmentNumber"
-                  />
-                </td>
+                <td><label for="city">City<span class="required-star">*</span></label></td>
+                <td><input type="text" id="city" name="city" required /></td>
               </tr>
               <tr>
-                <td>
-                  <label for="city"
-                    >City<span class="required-star">*</span></label
-                  >
-                </td>
-                <td>
-                  <input type="text" id="city" name="city" required />
-                </td>
+                <td><label for="province">Province<span class="required-star">*</span></label></td>
+                <td><input type="text" id="province" name="province" required /></td>
               </tr>
               <tr>
-                <td>
-                  <label for="province"
-                    >Province<span class="required-star">*</span></label
-                  >
-                </td>
-                <td>
-                  <input type="text" id="province" name="province" required />
-                </td>
+                <td><label for="postalCode">Postal Code<span class="required-star">*</span></label></td>
+                <td><input type="text" id="postalCode" name="postalCode" required /></td>
               </tr>
               <tr>
-                <td>
-                  <label for="postalCode"
-                    >Postal Code<span class="required-star">*</span></label
-                  >
-                </td>
-                <td>
-                  <input
-                    type="text"
-                    id="postalCode"
-                    name="postalCode"
-                    required
-                  />
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <label for="phoneNumber"
-                    >Phone Number<span class="required-star">*</span></label
-                  >
-                </td>
-                <td>
-                  <input
-                    type="text"
-                    id="phoneNumber"
-                    name="phoneNumber"
-                    required
-                  />
-                </td>
+                <td><label for="phoneNumber">Phone Number<span class="required-star">*</span></label></td>
+                <td><input type="text" id="phoneNumber" name="phoneNumber" required /></td>
               </tr>
               <tr>
                 <th colspan="2">Payment Information</th>
               </tr>
               <tr>
-                <td>
-                  <label for="nameOnCard"
-                    >Name On Card<span class="required-star">*</span></label
-                  >
-                </td>
-                <td>
-                  <input
-                    type="text"
-                    id="nameOnCard"
-                    name="nameOnCard"
-                    required
-                  />
-                </td>
+                <td><label for="nameOnCard">Name On Card<span class="required-star">*</span></label></td>
+                <td><input type="text" id="nameOnCard" name="nameOnCard" required /></td>
               </tr>
               <tr>
-                <td>
-                  <label for="cardNumber"
-                    >Card Number<span class="required-star">*</span></label
-                  >
-                </td>
-                <td>
-                  <input
-                    type="text"
-                    id="cardNumber"
-                    name="cardNumber"
-                    required
-                  />
-                </td>
+                <td><label for="cardNumber">Card Number<span class="required-star">*</span></label></td>
+                <td><input type="text" id="cardNumber" name="cardNumber" required /></td>
               </tr>
               <tr>
-                <td>
-                  <label for="cardExpiry"
-                    >Expiry Date (MM/YY)<span class="required-star"
-                      >*</span
-                    ></label
-                  >
-                </td>
-                <td>
-                  <input
-                    type="text"
-                    id="cardExpiry"
-                    name="cardExpiry"
-                    required
-                  />
-                </td>
+                <td><label for="cardExpiry">Expiry Date (MM/YY)<span class="required-star">*</span></label></td>
+                <td><input type="text" id="cardExpiry" name="cardExpiry" required /></td>
               </tr>
               <tr>
-                <td>
-                  <label for="securityNumber"
-                    >Security Number<span class="required-star">*</span></label
-                  >
-                </td>
-                <td>
-                  <input
-                    type="text"
-                    id="securityNumber"
-                    name="securityNumber"
-                    required
-                  />
-                </td>
+                <td><label for="securityNumber">Security Number<span class="required-star">*</span></label></td>
+                <td><input type="text" id="securityNumber" name="securityNumber" required /></td>
               </tr>
             </table>
           </div>
-          <div class="order-button">
+
+          <!-- Centered Remember Me Checkbox and Submit Order Button -->
+          <div class="order-footer-container">
+            <label for="rememberMe">
+              <input type="checkbox" id="rememberMe" name="rememberMe" />
+              Remember Me
+            </label>
             <button type="submit">Submit Order</button>
           </div>
         </form>
@@ -309,29 +160,13 @@
           <p>Copyright &copy; Molten Metalworks 2024</p>
         </div>
         <div class="socials">
-          <a href="#" aria-label="Email"
-            ><img src="./images/email-icon 1.png" alt="Email" title="Email"
-          /></a>
-          <a href="#" aria-label="Facebook"
-            ><img
-              src="./images/facebook-icon 1.png"
-              alt="Facebook"
-              title="Facebook"
-          /></a>
-          <a href="#" aria-label="Instagram"
-            ><img
-              src="./images/instagram-icon 1.png"
-              alt="Instagram"
-              title="Instagram"
-          /></a>
-          <a href="#" aria-label="Twitter/X"
-            ><img
-              src="./images/twitter-icon 2.png"
-              alt="Twitter/X"
-              title="Twitter/X"
-          /></a>
+          <a href="#" aria-label="Email"><img src="images/email-icon 1.png" alt="Email" title="Email" /></a>
+          <a href="#" aria-label="Facebook"><img src="images/facebook-icon 1.png" alt="Facebook" title="Facebook" /></a>
+          <a href="#" aria-label="Instagram"><img src="images/instagram-icon 1.png" alt="Instagram" title="Instagram" /></a>
+          <a href="#" aria-label="Twitter/X"><img src="images/twitter-icon 2.png" alt="Twitter/X" title="Twitter/X" /></a>
         </div>
       </footer>
     </div>
+    <script src="scripts/script.js"></script>
   </body>
 </html>
