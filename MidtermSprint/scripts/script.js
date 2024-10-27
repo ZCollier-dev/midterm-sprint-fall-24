@@ -330,6 +330,7 @@ function handleFormSubmission(event) {
 document.addEventListener("DOMContentLoaded", function () {
   displayOrderNumber();
   loadStoredData();
+  calculateOrderTotal();
 
   document
     .getElementById("customItemMaterial")
