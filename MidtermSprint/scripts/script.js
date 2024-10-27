@@ -14,7 +14,7 @@ function alertHandler(message, type) {
   setTimeout(function () {
     document.querySelector("#alertBox").innerHTML = "";
     document.getElementById("alertBox").style.background = "rgba(0, 0, 0, 0)";
-  }, 3000);
+  }, 5000);
 }
 
 // Function to generate and display a random order number
@@ -180,6 +180,9 @@ const validations = {
     let emailRegex = /^.*\.?.+@.+\..+$/;
     if (emailRegex.test(email)) {
       return true;
+    } else {
+      alertHandler("Invalid email.", false);
+      return false;
     }
   },
   province: function () {
@@ -203,6 +206,9 @@ const validations = {
     provinceList.forEach((element) => {
       if (province === element) {
         return true;
+      } else {
+        alertHandler("Invalid province.", false);
+        return false;
       }
     });
   },
@@ -218,6 +224,9 @@ const validations = {
 
     if (postalRegex.test(postalCode)) {
       return true;
+    } else {
+      alertHandler("Invalid postal code.", false);
+      return false;
     }
   },
   phoneNumber: function () {
@@ -225,6 +234,9 @@ const validations = {
     let phoneNumber = document.getElementById("phoneNumber").value;
     if (phoneRegex.test(phoneNumber)) {
       return true;
+    } else {
+      alertHandler("Invalid phone number.", false);
+      return false;
     }
   },
   cardNumber: function () {
@@ -232,6 +244,9 @@ const validations = {
     let cardNumber = document.getElementById("cardNumber").value;
     if (cardRegex.test(cardNumber)) {
       return true;
+    } else {
+      alertHandler("Invalid card number.", false);
+      return false;
     }
   },
   expiryDate: function () {
@@ -239,6 +254,9 @@ const validations = {
     let expiryRegex = /^[12]?\d\/\d{2}$/;
     if (expiryRegex.test(expiryDate)) {
       return true;
+    } else {
+      alertHandler("Invalid expiry date.", false);
+      return false;
     }
   },
   securityNumber: function () {
@@ -246,6 +264,9 @@ const validations = {
     let securityNumber = document.getElementById("securityNumber").value;
     if (securityRegex.test(securityNumber)) {
       return true;
+    } else {
+      alertHandler("Invalid security number.", false);
+      return false;
     }
   },
 };
@@ -284,8 +305,26 @@ function handleFormSubmission(event) {
     }
   }
 
-  storeFormData();
-  alertHandler("Order placed.", true);
+  let validationData = [
+    validations.email,
+    validations.province,
+    validations.postalCode,
+    validations.phoneNumber,
+    validations.cardNumber,
+    validations.expiryDate,
+    validations.securityNumber,
+  ];
+  let valValue = true;
+  for (let v in validationData) {
+    if (!validationData[v]) {
+      valValue = false;
+    }
+  }
+
+  if (valValue) {
+    storeFormData();
+    alertHandler("Order placed.", true);
+  }
 }
 
 // Event listeners for DOM manipulation
