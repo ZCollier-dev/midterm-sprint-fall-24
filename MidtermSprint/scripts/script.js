@@ -203,14 +203,13 @@ const validations = {
       "NT",
       "NU",
     ];
-    provinceList.forEach((element) => {
-      if (province === element) {
+    for (let i = 0; i < provinceList.length; ++i) {
+      if (province === provinceList[i]) {
         return true;
-      } else {
-        alertHandler("Invalid province.", false);
-        return false;
       }
-    });
+    }
+    alertHandler("Invalid province.", false);
+    return false;
   },
   postalCode: function () {
     let postalRegex =
@@ -306,13 +305,13 @@ function handleFormSubmission(event) {
   }
 
   let validationData = [
-    validations.email,
-    validations.province,
-    validations.postalCode,
-    validations.phoneNumber,
-    validations.cardNumber,
-    validations.expiryDate,
-    validations.securityNumber,
+    validations.email(),
+    validations.province(),
+    validations.postalCode(),
+    validations.phoneNumber(),
+    validations.cardNumber(),
+    validations.expiryDate(),
+    validations.securityNumber(),
   ];
   let valValue = true;
   for (let v in validationData) {
