@@ -173,6 +173,83 @@ function isCartEmpty() {
   return orderListTable.rows.length === 0;
 }
 
+// Validation Functions - returns true if valid, false if not
+const validations = {
+  email: function () {
+    let email = document.getElementById("emailAddress").value;
+    let emailRegex = /^.*\.?.+@.+\..+$/;
+    if (emailRegex.test(email)) {
+      return true;
+    }
+  },
+  province: function () {
+    let province = document.getElementById("province").value;
+    province = province.toUpperCase();
+    const provinceList = [
+      "NL",
+      "PE",
+      "NS",
+      "NB",
+      "QC",
+      "ON",
+      "MB",
+      "SK",
+      "AB",
+      "BC",
+      "YT",
+      "NT",
+      "NU",
+    ];
+    provinceList.forEach((element) => {
+      if (province === element) {
+        return true;
+      }
+    });
+  },
+  postalCode: function () {
+    let postalRegex =
+      /[ABCEGHJKLMNPRSTVXY]\d[ABCEGHJKLMNPRSTVWXYZ]\s\d[ABCEGHJKLMNPRSTVWXYZ]\d/;
+    let postalCode = document.getElementById("postalCode").value;
+    postalCode = postalCode.toUpperCase();
+    postalCode = postalCode.trim();
+    let postalStart = postalCode.match(/^[A-Z]\d[A-Z]/g);
+    let postalEnd = postalCode.match(/\d[A-Z]\d$/g);
+    postalCode = `${postalStart} ${postalEnd}`;
+
+    if (postalRegex.test(postalCode)) {
+      return true;
+    }
+  },
+  phoneNumber: function () {
+    let phoneRegex = /\d{10}/;
+    let phoneNumber = document.getElementById("phoneNumber").value;
+    if (phoneRegex.test(phoneNumber)) {
+      return true;
+    }
+  },
+  cardNumber: function () {
+    let cardRegex = /\d{16}/;
+    let cardNumber = document.getElementById("cardNumber").value;
+    if (cardRegex.test(cardNumber)) {
+      return true;
+    }
+  },
+  expiryDate: function () {
+    let expiryDate = document.getElementById("cardExpiry").value;
+    let expiryRegex = /^[12]?\d\/\d{2}$/;
+    if (expiryRegex.test(expiryDate)) {
+      return true;
+    }
+  },
+  securityNumber: function () {
+    let securityRegex = /\d{3}/;
+    let securityNumber = document.getElementById("securityNumber").value;
+    if (securityRegex.test(securityNumber)) {
+      return true;
+    }
+  },
+};
+
 // Form submission event handler to validate cart and confirm storing data if "Remember Me" is checked
 function handleFormSubmission(event) {
   event.preventDefault();
