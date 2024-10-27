@@ -250,11 +250,11 @@ const validations = {
   },
   expiryDate: function () {
     let expiryDate = document.getElementById("cardExpiry").value;
-    let expiryRegex = /^[12]?\d\/\d{2}$/;
+    let expiryRegex = /^(0[1-9]|1[0-2])\/\d{2}$/;
     if (expiryRegex.test(expiryDate)) {
       return true;
     } else {
-      alertHandler("Invalid expiry date.", false);
+      alertHandler("Invalid expiry date. Please use MM/YY format.", false);
       return false;
     }
   },
@@ -323,6 +323,14 @@ function handleFormSubmission(event) {
   if (valValue) {
     storeFormData();
     alertHandler("Order placed.", true);
+
+    // Clear the order table
+    const orderListTable = document
+      .getElementById("orderList")
+      .getElementsByTagName("tbody")[0];
+    orderListTable.innerHTML = ""; // Clear all rows from the table
+
+    document.getElementById("orderTotal").value = "$0.00"; // Reset the total value
   }
 }
 
